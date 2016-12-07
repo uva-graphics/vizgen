@@ -243,7 +243,7 @@ def f(a, b):
     #source_pair_print(s, s_orig)
     source_pair_test(program_info, s, s_orig)
 
-    for (ifilename, filename) in enumerate('../apps/blur_one_stage/blur_one_stage.py ../apps/composite/composite.py'.split()):
+    for (ifilename, filename) in enumerate('../apps/blur_one_stage/blur_one_stage_rgb.py ../apps/composite/composite_rgb.py'.split()):
         if verbose:
             print(filename)
         s_orig = open(filename, 'rt').read()

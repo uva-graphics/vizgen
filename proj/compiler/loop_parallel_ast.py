@@ -694,15 +694,15 @@ def find_parallel_depth(node, base_depth):
 def unit_test():
     
     testnames = ['bilateral_grid/bilateral_grid_clean.py', 
-                 'blur_one_stage/blur_one_stage.py', 
-                 'blur_two_stage/blur_two_stage.py', 
+                 'blur_one_stage/blur_one_stage_rgb.py',
+                 'blur_two_stage/blur_two_stage_rgb.py',
                  'camera_pipe/camera_pipe_fcam.py', 
-                 'composite/composite.py', 
+                 'composite/composite_rgb.py',
                  'harris_corner_circle/harris_corner_circle.py', 
                  'interpolate/interpolate.py', 
                  'local_laplacian/local_laplacian_fuse.py', 
                  'mandelbrot/mandelbrot_animate.py', 
-                 'optical_flow/optical_flow_patchmatch.py', 
+                 'optical_flow_patchmatch/optical_flow_patchmatch_inlined.py',
                  'pacman/pacman_clean.py', 
                  'raytracer/raytracer_short_simplified_animate.py']
     
