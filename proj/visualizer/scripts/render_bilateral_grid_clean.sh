@@ -1,0 +1,12 @@
+python render_video2.py \
+    --python_app ../../apps/bilateral_grid/bilateral_grid_clean.py \
+    --c_version ../../apps/bilateral_grid/c/ \
+    --input_frame_dir ../input_vids/fireworks_hd/frames/ \
+    --output_dir ../input_vids/fireworks_hd/output_bilateral_grid/ \
+    --output_duration $1 \
+    --output_fps 30 \
+    --app_versions_to_use ours,numba,unpython,c \
+    --no_input_img False \
+    --app_title_str "Bilateral Grid" \
+    --use_grayscale_img_for_python True \
+    --use_grayscale_img_for_c True

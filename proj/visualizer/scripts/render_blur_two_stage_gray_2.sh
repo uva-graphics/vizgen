@@ -1,0 +1,12 @@
+python render_video2.py \
+    --python_app ../../apps/blur_two_stage_gray/blur_two_stage.py \
+    --c_version ../../apps/blur_two_stage_gray/c/ \
+    --input_frame_dir ../input_vids/the_nature_of_montenegro/frames/ \
+    --output_dir ../input_vids/the_nature_of_montenegro/output_blur_two_stage_gray/ \
+    --output_duration $1 \
+    --output_fps 30 \
+    --app_versions_to_use ours,numba,pypy,c \
+    --no_input_img False \
+    --app_title_str "Grayscale Two-Stage Blur" \
+    --use_grayscale_img_for_python True \
+    --use_grayscale_img_for_c True

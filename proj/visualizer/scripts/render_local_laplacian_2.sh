@@ -1,0 +1,11 @@
+python render_video2.py \
+    --python_app ../../apps/local_laplacian/local_laplacian_fuse.py \
+    --c_version ../../apps/local_laplacian/c/ \
+    --input_frame_dir ../input_vids/the_nature_of_montenegro/frames/ \
+    --output_dir ../input_vids/the_nature_of_montenegro/output_local_laplacian/ \
+    --output_duration $1 \
+    --output_fps 30 \
+    --app_versions_to_use ours,numba,pypy,c \
+    --no_input_img False \
+    --app_title_str "Local Laplacian" \
+    --use_3_channel_img_for_python True

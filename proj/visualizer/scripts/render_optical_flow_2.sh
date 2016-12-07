@@ -1,0 +1,12 @@
+python render_video2.py \
+    --python_app ../../apps/optical_flow/optical_flow_one_module.py \
+    --c_version ../../apps/optical_flow/c/ \
+    --input_frame_dir ../input_vids/the_nature_of_montenegro/frames/ \
+    --output_dir ../input_vids/the_nature_of_montenegro/output_optical_flow/ \
+    --output_duration $1 \
+    --output_fps 30 \
+    --app_versions_to_use ours,numba,unpython,c \
+    --no_input_img False \
+    --app_title_str "Optical Flow" \
+    --use_2_input_frames True \
+    --use_3_channel_img_for_python True 
