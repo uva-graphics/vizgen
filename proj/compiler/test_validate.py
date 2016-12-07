@@ -22,6 +22,7 @@ changed = T1 > T0
 outdir = 'out_2016_08_23_validate'
 
 if changed:
-    system('unzip -f -o ' + filename)
+    flags = '-f -o' if os.path.exists(filename) else '-o'
+    system('unzip ' + flags + ' ' + filename)
 
 sys.exit(system('python compiler.py --validate ' + outdir))
