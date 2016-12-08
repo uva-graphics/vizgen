@@ -247,7 +247,7 @@ raytracer raytracer
 
     # Map our benchmark name to C filename (without .c prefix) in /c/ subdirectory of app directory.
     name_ours_to_c_filename = dict(keyvalue.split() for keyvalue in """
-bilateral_grid_clean bilateral_grid.c
+bilateral_grid bilateral_grid.c
 blur_one_stage_4channel blur_one_stage.c
 blur_one_stage_rgb blur_one_stage.c
 blur_one_stage_gray blur_one_stage.c
@@ -458,8 +458,9 @@ VectorizeInnermost Vectorize, innermost variable
         pythran_time = 0.0
         if args.pythran:
             pythran_stats = get_pythran_stats()
-            pythran_time = get_time_from_stats(pythran_stats)
-            ours_vs_pythran = pythran_time / ours_time
+            if pythran_stats is not None:
+                pythran_time = get_time_from_stats(pythran_stats)
+                ours_vs_pythran = pythran_time / ours_time
 
         def format_speedup(val, method='', problem=None, fmt=None):
             if csv:
@@ -498,7 +499,10 @@ VectorizeInnermost Vectorize, innermost variable
             c_stats = get_c_stats(args.cstats)
 #            print(c_appname)
 #            print(c_stats)
-            c_time = get_time_from_stats(c_stats)
+            if c_stats is not None:
+                c_time = get_time_from_stats(c_stats)
+            else:
+                c_time = 0.0
 #            if c_time == 0.0:
 #                raise ValueError
 #            print()
@@ -514,7 +518,7 @@ VectorizeInnermost Vectorize, innermost variable
                 if os.path.exists(c_filename):
                     c_lines += lines(c_filename, verbose=False, is_c=True)
             if c_lines == 0:
-                raise ValueError('missing C comparison file(s):', c_sub_appnameL, c_filenameL)
+                print('Warning: missing C comparison file(s):', c_sub_appnameL, c_filenameL)
             c_shorter = c_lines * 1.0 / lines_ours
 #            print(c_appname, c_filename, os.path.exists(c_filename))
 

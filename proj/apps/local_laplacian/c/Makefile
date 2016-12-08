@@ -13,8 +13,5 @@ CFLAGS=-Dreal=double \
 GCC_OPT_FLAGS=-O3
 MATH_FLAGS=-lm
 
-all: local_laplacian_fuse.c
+all: local_laplacian.c
 	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) local_laplacian_fuse.c $(MATH_FLAGS)
-	
-orig: local_laplacian.c
-	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) local_laplacian.c $(MATH_FLAGS)

@@ -13,8 +13,5 @@ CFLAGS=-Dreal=double \
 GCC_OPT_FLAGS=-O3
 MATH_FLAGS=-lm
 
-all: interpolate_new.c
+all: interpolate.c
 	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) interpolate_new.c $(MATH_FLAGS)
-	
-orig: interpolate.c
-	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) interpolate.c $(MATH_FLAGS)

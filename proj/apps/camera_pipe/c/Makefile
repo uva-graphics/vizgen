@@ -13,8 +13,5 @@ CFLAGS=-Dreal=double \
 GCC_OPT_FLAGS=-O3
 MATH_FLAGS=-lm
 
-all: camera_pipe_fcam.c
+all: camera_pipe.c
 	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) camera_pipe_fcam.c $(MATH_FLAGS)
-	
-orig: camera_pipe.c
-	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) camera_pipe.c $(MATH_FLAGS)
