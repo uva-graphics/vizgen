@@ -13,5 +13,5 @@ CFLAGS=-Dreal=double \
 GCC_OPT_FLAGS=-O3
 MATH_FLAGS=-lm
 
-all: raytracer_short_simplified.c
-	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) raytracer_short_simplified.c $(MATH_FLAGS)
+all: raytracer.c
+	$(CC) $(GCC_OPT_FLAGS) $(CFLAGS) raytracer.c $(MATH_FLAGS)

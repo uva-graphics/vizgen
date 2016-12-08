@@ -35,18 +35,18 @@ test_programs/blur_one_stage_full.py
 ../apps/composite_gray/composite.py
 ../apps/blur_one_stage_gray/blur_one_stage.py
 ../apps/blur_two_stage_gray/blur_two_stage.py
-../apps/camera_pipe/camera_pipe_fcam.py
+../apps/camera_pipe/camera_pipe.py
 ../apps/composite/composite_4channel.py
-../apps/local_laplacian/local_laplacian_fuse.py
+../apps/local_laplacian/local_laplacian.py
 ../apps/interpolate/interpolate.py
-../apps/bilateral_grid/bilateral_grid_clean.py
+../apps/bilateral_grid/bilateral_grid.py
 ../apps/blur_two_stage/blur_two_stage_4channel.py
-../apps/raytracer/raytracer_short_simplified_animate.py
+../apps/raytracer/raytracer.py
 ../apps/optical_flow_patchmatch/optical_flow_patchmatch.py
-../apps/pacman/pacman_clean.py
+../apps/pacman/pacman.py
 ../apps/blur_one_stage/blur_one_stage_4channel.py
 ../apps/harris_corner/harris_corner.py
-../apps/mandelbrot/mandelbrot_animate.py
+../apps/mandelbrot/mandelbrot.py
 ../apps/composite/composite_rgb.py
 """.split() + filename_L
 

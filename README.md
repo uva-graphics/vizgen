@@ -88,9 +88,11 @@ THE SOFTWARE.
 
 # Frequently Asked Questions
 
-## Is this a production compiler?
+## What are some limitations?
 
-No. It is a research compiler. It may not succeed for all input programs, scale to long input programs, and currently it compiles only one module at a time.
+This is a research compiler. It may not succeed for all input programs, scale to long input programs, and currently it compiles only one module at a time. It uses autotuning so it may take a while to finish for a given input program. It presently supports only CPU.
+
+There is currently not support for accelerating user-defined classes (only functions),  type inference may not work in all cases, and some scenarios may not be optimized (e.g. code that returns matrices currently is not optimized).
 
 ## How can I make my module work with the compiler?
 

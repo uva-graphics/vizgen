@@ -1,4 +1,8 @@
 
+"""
+Print summary statistics from previous run of overnight benchmark (bench.py).
+"""
+
 import sys
 import glob
 import os.path
@@ -202,19 +206,19 @@ blur_one_stage_gray One stage blur (gray)
 blur_two_stage_4channel Two stage blur (RGBA)
 blur_two_stage_rgb Two stage blur (RGB)
 blur_two_stage_gray Two stage blur (gray)
-camera_pipe_fcam Camera pipeline
+camera_pipe Camera pipeline
 composite_gray Composite (gray)
 composite_4channel Composite (RGBA)
 composite_rgb Composite (RGB)
 harris_corner Harris corner
 harris_corner_circle Harris corner
 interpolate Interpolate
-local_laplacian_fuse Local Laplacian
-mandelbrot_animate Mandelbrot
+local_laplacian Local Laplacian
+mandelbrot Mandelbrot
 optical_flow_one_module Optical flow
 optical_flow_patchmatch Optical flow
-pacman_clean Pac-Man
-raytracer_short_simplified_animate Raytracer
+pacman Pac-Man
+raytracer Raytracer
 """.strip().split('\n'))
 
     # Map our benchmark name to name used in C comparison script benchmark_naive_c.py
@@ -226,19 +230,19 @@ blur_one_stage_rgb blur_one_stage
 blur_two_stage_4channel blur_two_stage
 blur_two_stage_rgb blur_two_stage
 blur_two_stage_gray blur_two_stage_gray
-camera_pipe_fcam camera_pipe
+camera_pipe camera_pipe
 composite_gray composite_gray
 composite_4channel composite
 composite_rgb composite
 harris_corner harris_corner
 harris_corner_circle harris_corner_circle
 interpolate interpolate
-local_laplacian_fuse local_laplacian
-mandelbrot_animate mandelbrot
+local_laplacian local_laplacian
+mandelbrot mandelbrot
 optical_flow_one_module optical_flow
 optical_flow_patchmatch optical_flow_patchmatch
-pacman_clean pacman
-raytracer_short_simplified_animate raytracer
+pacman pacman
+raytracer raytracer
 """.strip().split('\n'))
 
     # Map our benchmark name to C filename (without .c prefix) in /c/ subdirectory of app directory.
@@ -250,19 +254,19 @@ blur_one_stage_gray blur_one_stage.c
 blur_two_stage_4channel blur_two_stage.c
 blur_two_stage_rgb blur_two_stage.c
 blur_two_stage_gray blur_two_stage.c
-camera_pipe_fcam camera_pipe.c
+camera_pipe camera_pipe.c
 composite_gray composite.c
 composite_4channel composite.c
 composite_rgb composite.c
 harris_corner harris_corner.c
 harris_corner_circle harris_corner.c
 interpolate interpolate.c
-local_laplacian_fuse local_laplacian.c
-mandelbrot_animate mandelbrot.c
+local_laplacian local_laplacian.c
+mandelbrot mandelbrot.c
 optical_flow_one_module optical_flow.c,color_wheel.h,draw_line.h
 optical_flow_patchmatch optical_flow_patchmatch.c
-pacman_clean pacman.c
-raytracer_short_simplified_animate raytracer_short_simplified.c
+pacman pacman.c
+raytracer raytracer.c
 """.strip().split('\n'))
     #if latex or transforms_used:
     subdirL = sorted(subdirL, key=lambda subdir: name_aliases.get(os.path.split(subdir)[1], os.path.split(subdir)[1]).lower())

@@ -88,7 +88,7 @@ def main():
 
 #    system('python compiler.py ../apps/interpolate/interpolate_float.py --out-dir {}/interpolate_float'.format(outdir))
 
-    system('python compiler.py ../apps/mandelbrot/mandelbrot_animate.py --out-dir {}/mandelbrot_animate'.format(outdir))
+    system('python compiler.py ../apps/mandelbrot/mandelbrot.py --out-dir {}/mandelbrot'.format(outdir))
 
     system('python compiler.py ../apps/composite/composite_rgb.py --out-dir {}/composite_rgb'.format(outdir))
 
@@ -104,9 +104,9 @@ def main():
 
     system('python compiler.py ../apps/interpolate/interpolate.py --out-dir {}/interpolate'.format(outdir))
 
-    system('python compiler.py ../apps/optical_flow_patchmatch/optical_flow_patchmatch_inlined.py --out-dir {}/optical_flow_patchmatch'.format(outdir))
+    system('python compiler.py ../apps/optical_flow_patchmatch/optical_flow_patchmatch.py --out-dir {}/optical_flow_patchmatch'.format(outdir))
 
-    system('python compiler.py ../apps/pacman/pacman_clean.py --out-dir {}/pacman_clean'.format(outdir))
+    system('python compiler.py ../apps/pacman/pacman.py --out-dir {}/pacman'.format(outdir))
 
 #    system('python compiler.py ../apps/raytracer/raytracer.py --out-dir out/raytracer')
 
@@ -116,13 +116,13 @@ def main():
 #    system('python compiler.py ../apps/harris_corner/harris_corner.py --out-dir {}/harris_corner'.format(outdir))
     system('python compiler.py ../apps/harris_corner_circle/harris_corner_circle.py --out-dir {}/harris_corner_circle'.format(outdir))
 
-    system('python compiler.py ../apps/raytracer/raytracer_short_simplified_animate.py --out-dir {}/raytracer_short_simplified_animate'.format(outdir))
+    system('python compiler.py ../apps/raytracer/raytracer.py --out-dir {}/raytracer'.format(outdir))
 
-    system('python compiler.py ../apps/bilateral_grid/bilateral_grid_clean.py --out-dir {}/bilateral_grid_clean'.format(outdir))
+    system('python compiler.py ../apps/bilateral_grid/bilateral_grid.py --out-dir {}/bilateral_grid'.format(outdir))
 
-    system('python compiler.py ../apps/local_laplacian/local_laplacian_fuse.py --out-dir {}/local_laplacian_fuse'.format(outdir))
+    system('python compiler.py ../apps/local_laplacian/local_laplacian.py --out-dir {}/local_laplacian'.format(outdir))
 
-    system('python compiler.py ../apps/camera_pipe/camera_pipe_fcam.py --out-dir {}/camera_pipe_fcam'.format(outdir))
+    system('python compiler.py ../apps/camera_pipe/camera_pipe.py --out-dir {}/camera_pipe'.format(outdir))
 
 #    system('python compiler.py --validate {} --out-dir validate_{} --validate-speedups > {}/validate.csv'.format(outdir, outdir, outdir))
 
